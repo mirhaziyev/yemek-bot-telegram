@@ -9,7 +9,7 @@ def txt_to_words(text):
    # print(words)
     return words
 
-dataset = pd.read_csv("final_dataset.csv")
+dataset = pd.read_csv("final_dataset.csv") # check root Data 
 del dataset['Unnamed: 0']
 
 dataset['hazirlanmasi_sozleri'] = dataset['hazirlanmasi'].apply(lambda x : ([str(elem) for elem in txt_to_words(x)]))
